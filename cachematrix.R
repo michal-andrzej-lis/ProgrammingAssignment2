@@ -1,6 +1,12 @@
 
-## The following function creates an object with methods
-## for working the underlying matrix
+## The following function creates an object with methods for working with the underlying matrices       
+##
+##      set             - sets    the original matrix and clears the previous inverse
+##      get             - returns the current matrix
+##      set_inv_matrix  - stores  the calculated inverse of the original matrix
+##      get_inv_matrix  - returns the calculated inverse of the original matrix
+
+
 
 makeCacheMatrix <- function(x = matrix()) {
         im <- NULL
@@ -17,7 +23,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Following function calculates the inverse matrix if the result from previous calculationsis undefined. 
+## Following function calculates the inverse matrix if the result from previous calculations is undefined 
+## otherwise itr returns already stored result of the last calculation.   
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
